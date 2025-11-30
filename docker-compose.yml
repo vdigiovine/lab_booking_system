@@ -1,14 +1,19 @@
 services:
-  db:
-    image: postgres:15
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: lab_booking
+  backend:
+    build: ./backend
     ports:
-      - "5432:5432"
+      - "8000:8000"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///./lab_booking.db
 
-volumes:
-  postgres_data:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend

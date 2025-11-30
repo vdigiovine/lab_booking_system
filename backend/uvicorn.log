@@ -9,3 +9,8 @@ INFO:     127.0.0.1:53928 - "POST /users/ HTTP/1.1" 200 OK
 INFO:     127.0.0.1:42514 - "POST /labs/ HTTP/1.1" 200 OK
 INFO:     127.0.0.1:51744 - "GET /docs HTTP/1.1" 200 OK
 INFO:     127.0.0.1:51744 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [16749]
+INFO:     Stopping reloader process [16742]

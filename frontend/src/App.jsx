@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Calendar from './components/Calendar';
 import LoginModal from './components/LoginModal';
-import { jwtDecode } from "jwt-decode"; // Need to install this or just parse manually. I'll parse manually to save install time or just assume simple token.
-// Actually I didn't install jwt-decode. I'll use a simple parser or just store username.
+
 
 function App() {
   const [user, setUser] = useState(null);
